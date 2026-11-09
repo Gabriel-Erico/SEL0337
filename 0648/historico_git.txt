@@ -1,0 +1,5 @@
+commit c6d9cd640fc98d126b71552c914719ec67e268bd
+Author: Gabriel-Erico <gabriellacerda21@usp.br>
+Date:   Mon Nov 9 18:22:22 2026 +0000
+
+    Entrega dos checkpoints 1 e 2

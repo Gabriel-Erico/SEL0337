@@ -1,0 +1,14 @@
+[Unit]
+Description=Servico Python Controle de LED por Botao
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/sel/0648/egab_blink1.py
+ExecStop=/usr/bin/python3 /home/sel/0648/parada.py
+User=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

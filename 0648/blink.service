@@ -1,14 +1,22 @@
 [Unit]
+# Descrição do serviço exibida  
 Description=Servico Python Controle de LED por Botao
+# Garante que o serviço só começa após o ambiente multi-utilizador estar carregado
 After=multi-user.target
 
 [Service]
+# Indica um processo standard que permanece em execução
 Type=simple
+# Programa Python executado na inicialização do serviço 
 ExecStart=/usr/bin/python3 /home/sel/0648/egab_blink1.py
+# Programa Python executado ao parar o serviço
 ExecStop=/usr/bin/python3 /home/sel/0648/parada.py
+# Executa como root para garantir permissões de acesso aos pinos GPIO
 User=root
+# Reinicia o serviço automaticamente em caso de falha de execução
 Restart=on-failure
 
 [Install]
+# Associa o serviço ao grupo de arranque padrão do sistema operacional
 WantedBy=multi-user.target
 
